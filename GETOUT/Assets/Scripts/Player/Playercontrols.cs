@@ -6,6 +6,7 @@ public class PlayerController : MonoBehaviour
 {
     public float moveSpeed;
     public LayerMask solidobjectslayer;
+    public LayerMask wallsLayer;
     private bool isMoving;
     private Vector2 input;
     private Animator animator;
@@ -50,6 +51,11 @@ public class PlayerController : MonoBehaviour
     private bool IsWalkable(Vector3 targetPos)
         {
             if(Physics2D.OverlapCircle(targetPos, 0.2f, solidobjectslayer)!=null)
+            {
+                return false;
+            }
+            return true;
+             if(Physics2D.OverlapCircle(targetPos, 0.2f, wallsLayer)!=null)
             {
                 return false;
             }
