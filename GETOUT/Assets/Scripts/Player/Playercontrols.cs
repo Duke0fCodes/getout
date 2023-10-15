@@ -10,9 +10,12 @@ public class PlayerController : MonoBehaviour
     private bool isMoving;
     private Vector2 input;
     private Animator animator;
+    private Inventory inventory;
     private void Awake()
     {
         animator=GetComponent<Animator>();
+
+        inventory = new Inventory();
     } 
     private void Update()
     {
