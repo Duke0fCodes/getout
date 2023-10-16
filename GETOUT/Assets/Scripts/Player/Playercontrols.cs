@@ -72,10 +72,5 @@ public class PlayerController : MonoBehaviour
                 return false;
             }
             return true;
-             if(Physics2D.OverlapCircle(targetPos, 0.2f, wallsLayer)!=null)
-            {
-                return false;
-            }
-            return true;
         }
 }

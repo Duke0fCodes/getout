@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class objcontroller : MonoBehaviour, Interactable
+public class objectcontroller : MonoBehaviour, Interactable
 {
+   [SerializeField]Dialog dialog;
    public void Interact()
    {
-      Debug.Log("Interacting");
+      DialogueManager.Instance.ShowDialog(dialog);
    }
 }
