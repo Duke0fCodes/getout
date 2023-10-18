@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     [SerializeField] GameObject dialogBox;
-    [SerializeField] text dialogText;
+    [SerializeField] Text dialogText;
     [SerializeField] int lettersPerSecond;
     public static DialogueManager Instance{get; private set;}
     private void Awake()
@@ -18,10 +18,10 @@ public class DialogueManager : MonoBehaviour
         dialogBox.SetActive(true);
         StartCoroutine(TypeDialog(dialog.Lines[0]));
     }
-    public IEnumerator TypeDialog(string line)
+    public IEnumerator TypeDialog(string Lines)
     {
         dialogText.text="";
-        foreach(var letter in line.ToCharArray())
+        foreach(var letter in Lines.ToCharArray())
         {
             dialogText.text+=letter;
             yield return new WaitForSeconds(1f / lettersPerSecond);
