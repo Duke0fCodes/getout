@@ -14,8 +14,8 @@ TagManager:
   - 
   - 
   - solidobjects
-  - 
-  - 
+  - walls
+  - interactable
   - 
   - 
   - 
@@ -44,9 +44,12 @@ TagManager:
   - name: Background
     uniqueID: 1862684831
     locked: 0
+  - name: Player
+    uniqueID: 1033703163
+    locked: 0
   - name: Foreground
     uniqueID: 1303025323
     locked: 0
-  - name: Player
-    uniqueID: 1033703163
+  - name: walls
+    uniqueID: 214828927
     locked: 0
